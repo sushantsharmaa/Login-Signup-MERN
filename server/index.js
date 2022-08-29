@@ -9,7 +9,7 @@ dotenv.config();
 const authRouter = require("./routers/authRouter");
 
 app.use(express.json());
-app.use("/auth", authRouter);
+app.use("/user", authRouter);
 
 mongoose.connect(
   `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.rmptetq.mongodb.net/foodApp?retryWrites=true&w=majority`,
